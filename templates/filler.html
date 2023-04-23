@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Расчет соотношения матрица-наполнитель</title>
+</head>
+<body>
+<style>
+    body {
+    background-color: #d4e6f1
+    }
+    w1 {
+    font-family: 'Rye';font-size: 22px
+    }
+</style>
+    <h1>Расчет соотношения матрица-наполнитель</h1>
+    <form action="" method="post">
+    <fieldset>
+        <legend>Введите параметры</legend>
+    <p>
+	    <label>Введите Плотность, кг/м3</label>
+	    <input type="number" name="p1" required>
+    </p><p>
+	    <label>Введите Модуль упругости, ГПа</label>
+	    <input type="number" name="p2" required>
+    </p><p>
+	    <label>Введите Количество отвердителя, м.%</label>
+	    <input type="number" name="p3" required>
+    </p><p>
+        <label>Введите Содержание эпоксидных групп,%_2</label>
+	    <input type="number" name="p4" required>
+    </p><p>
+        <label>Введите Температура вспышки, С_2</label>
+	    <input type="number" name="p5" required>
+    </p><p>
+        <label>Введите Поверхностная плотность, г/м2</label>
+	    <input type="number" name="p6" required>
+    </p><p>
+        <label>Введите Модуль упругости при растяжении, ГПа</label>
+	    <input type="number" name="p7" required>
+    </p><p>
+        <label>Введите Прочность при растяжении, МПа</label>
+	    <input type="number" name="p8" required>
+    </p><p>
+        <label>Введите Потребление смолы, г/м2</label>
+	    <input type="number" name="p9" required>
+    </p><p>
+        <label>Введите Угол нашивки, град</label>
+	    <input type="number" name="p10" required>
+    </p><p>
+        <label>Введите Шаг нашивки</label>
+	    <input type="number" name="p11" required>
+    </p><p>
+        <label>Введите Плотность нашивки</label>
+	    <input type="number" name="p12" required>
+	</p>
+    </fieldset>
+	<p>
+	    <input type="submit" value="Рассчитать">
+        <input type="reset">
+	</p>
+    </form>
+    <p>
+    {% if message %}
+        <p><b>{{message}}</b></p>
+    {% endif %}
+    </p>
+</body>
+<footer>
+    <p>
+        <a href="{{url_for('choose_prediction_method')}}"><button>Вернуться на главную страницу</button></a>
+    </p>
+</footer>
+</html>
